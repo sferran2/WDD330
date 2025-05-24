@@ -27,6 +27,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -260,4 +261,27 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+.product-listing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.product-listing a {
+  padding: 10px;
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-listing a:hover {
+  background-color: #7f7e81;
 }

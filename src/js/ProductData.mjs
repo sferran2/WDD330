@@ -8,6 +8,10 @@ function convertToJson(res) {
   }
 }
 
+function sortByPrice(result) {
+  return result.sort((a,b) => a.FinalPrice - b.FinalPrice);
+}
+
 export default class ProductData {
   constructor(){
 
@@ -16,7 +20,8 @@ export default class ProductData {
   async getData(category) {
     const response = await fetch(`${baseURL}products/search/${category} `);
     const data = await convertToJson(response);
-    return data.Result;
+    const sort = sortByPrice(data.Result)
+    return sort;
   }
   async findProductById(id) {
     const products = await fetch(`${baseURL}product/${id}`);

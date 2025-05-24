@@ -5,7 +5,6 @@ import ProductList from "./ShoppingCart.mjs";
 loadHeaderFooter();
 
 
-
 const cartItems = getLocalStorage("so-cart");
 
 const element = document.querySelector(".product-list");

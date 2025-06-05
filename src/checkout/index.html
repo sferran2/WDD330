@@ -15,7 +15,7 @@
 
   <body>
     <header class="divider" id="main-header"></header>
-
+    
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
@@ -32,8 +32,8 @@
         </fieldset>
         <fieldset>
           <legend>Shipping Address:</legend>
-          <label for="street">Street (optional)</label>
-          <input id="street" name="street" type="text" >
+          <label for="street">Street* </label>
+          <input id="street" name="street" type="text" required>
           <label for="city">City*</label>
           <input id="city" name="city" type="text">
           <label for="state">State*</label>
@@ -44,11 +44,11 @@
         <fieldset>
           <legend>Payment:</legend>
           <label for="cardNumber">Credit Card Number*</label>
-          <input type="text" name="cardNumber" id="cardNumber" value="1234123412341234" required>
+          <input type="text" name="cardNumber" id="cardNumber"  required> 
           <label for="expiration">Expiration*</label>
           <input type="text" name="expiration" id="expiration"  required>
           <label for="code">Security code*</label>
-          <input type="text" name="code" id="code" value="123">
+          <input type="text" name="code" id="code">
 
         </fieldset>
         <div  class="summary-details">
@@ -68,3 +68,5 @@
     <footer id="main-footer"></footer>
   </body>
 </html>
+
+<!-- value="1234123412341234" -->

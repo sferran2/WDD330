@@ -8,20 +8,65 @@
 
     <title>Sleep Outside | Checkout</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="../js/checkout.js" type="module"></script>
     
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
-
+    
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
       </section>
+      <form name="checkout">
+        <input type="hidden" name="orderDate">
+        <fieldset>
+          <legend>Customer Name:</legend>
+          <label for="fname">Firstname*</label>
+          <input id="fname" name="fname" type="text" required>
+          <label for="lname">Lastname*</label>
+          <input id="lname" name="lname" type="text" required>
+
+        </fieldset>
+        <fieldset>
+          <legend>Shipping Address:</legend>
+          <label for="street">Street* </label>
+          <input id="street" name="street" type="text" required>
+          <label for="city">City*</label>
+          <input id="city" name="city" type="text">
+          <label for="state">State*</label>
+          <input id="state" name="state" type="text" required>
+          <label for="zip-code">Zip Code*</label>
+          <input id="zip" name="zip" type="text" required>
+        </fieldset>
+        <fieldset>
+          <legend>Payment:</legend>
+          <label for="cardNumber">Credit Card Number*</label>
+          <input type="text" name="cardNumber" id="cardNumber"  required> 
+          <label for="expiration">Expiration*</label>
+          <input type="text" name="expiration" id="expiration"  required>
+          <label for="code">Security code*</label>
+          <input type="text" name="code" id="code">
+
+        </fieldset>
+        <div  class="summary-details">
+          <h3>Order Summary:</h3>
+          <p>No. of items:<span id="itemNum"></span></p>
+          <p>Subtotal:<span id="cartTotal"></span></p>
+          <p>Tax: <span id="tax"></span></p>
+          <p>Shipping Estimate:<span id="shipping"></span></p>
+          <p>Order Total:<span id="orderTotal"></span></p>
+        </div>
+        <button type="submit" id="checkoutSubmit">Submit</button>
+        
+      </form>
+
     </main>
 
     <footer id="main-footer"></footer>
   </body>
 </html>
+
+<!-- value="1234123412341234" -->
